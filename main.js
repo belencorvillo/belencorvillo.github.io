@@ -55,6 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ------------------------------------------------------------------------
+     2b. SMOOTH SCROLL FOR HERO VIEW PROJECTS BUTTON & CONNECT BUTTON
+     ------------------------------------------------------------------------ */
+  const viewProjectsBtn = document.getElementById('btn-view-projects');
+  if (viewProjectsBtn) {
+    viewProjectsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById('projects');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  const connectBtn = document.getElementById('btn-connect');
+  if (connectBtn) {
+    connectBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('https://www.linkedin.com/in/belen-corvillo-guerra/', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      3. MOBILE NAVIGATION MENU TOGGLE
      ------------------------------------------------------------------------ */
   const mobileToggleBtn = document.getElementById('mobile-toggle');

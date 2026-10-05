@@ -25,7 +25,7 @@
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer" class="nav-link">Connect</a>
       </nav>
 
       <div class="nav-actions">
@@ -81,38 +81,21 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
+            <a href="#projects" class="btn btn-primary" id="btn-view-projects">
               View Featured Projects
               <svg viewBox="0 0 24 24">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer"
-              class="social-btn" aria-label="LinkedIn Profile">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-            <a href="mailto:belen.corvillo.guerra@gmail.com" class="social-btn" aria-label="Send Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
+            <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-connect">CONNECT WITH ME!</a>
           </div>
         </div>
 
         <!-- HERO VISUAL -->
         <div class="hero-visual">
           <div class="glass-card hero-avatar-card">
-            <img src="CARNET_IA.png" alt="Belén Corvillo Guerra" class="hero-only-photo">
+            <img src="CARNET_edited.png" alt="Belén Corvillo Guerra" class="hero-only-photo">
           </div>
         </div>
       </div>
@@ -386,109 +369,104 @@
         <h2 class="section-title">Education & Professional Experience</h2>
       </div>
 
-      <div class="timeline">
-        <!-- ITEM 1: MASTER UPM -->
-        <div class="timeline-item">
-          <div class="timeline-dot current-dot"></div>
-          <div class="glass-card timeline-card timeline-card-active">
-            <div class="timeline-card-header">
-              <div>
-                <span class="timeline-badge-pill active-pill">Current Study</span>
-                <span class="timeline-date">2026 - Present</span>
-                <h3 class="timeline-title">Master's Degree in Automation & Robotics</h3>
-                <h4 class="timeline-subtitle">
-                  <span class="org-icon">🎓</span> Universidad Politécnica de Madrid (UPM)
-                </h4>
+      <div class="exp-bento-grid">
+        <!-- COLUMN 1: WORK & RESEARCH EXPERIENCE -->
+        <div class="exp-column exp-column-work">
+          <div class="exp-column-header">
+            <div class="exp-col-title-wrap">
+              <span class="exp-col-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <h3 class="exp-column-heading">Work & Research</h3>
+            </div>
+          </div>
+
+          <div class="exp-cards-list">
+            <!-- ITEM 1: SIEMENS -->
+            <div class="exp-bento-card glass-card exp-card-work">
+              <div class="exp-bento-top">
+                <span class="exp-bento-date">Feb 2026 — Jul 2026</span>
+                <div class="exp-bento-logo">
+                  <img src="siemens_logo.png" alt="SIEMENS Logo" class="bento-logo-img siemens-logo-img">
+                </div>
               </div>
-              <div class="timeline-logo-badge upm-badge" title="Universidad Politécnica de Madrid">
-                <img src="UPM_LOGO.png" alt="UPM Logo" class="timeline-logo-img upm-logo-img">
-              </div>
+              <h4 class="exp-bento-title">Production Machine Automation Intern</h4>
+              <p class="exp-bento-org">SIEMENS</p>
+              <p class="exp-bento-desc">
+                Developed 3D Digital Twins and virtual commissioning solutions within the field of industrial robot
+                cells and production machine automation.
+              </p>
             </div>
 
-            <p class="timeline-description">
-              Currently pursuing a Master's degree specializing in advanced automatic control systems, robotic
-              perception, artificial intelligence, and smart industrial automation.
-            </p>
+            <!-- ITEM 2: RESEARCH ASSISTANT / BECA COLABORACION -->
+            <div class="exp-bento-card glass-card exp-card-work">
+              <div class="exp-bento-top">
+                <span class="exp-bento-date">2025 — 2026</span>
+                <div class="exp-bento-logo">
+                  <img src="MAD_ROBOTICS.png" alt="MAD Robotics Logo" class="bento-logo-img mad-logo-img">
+                </div>
+              </div>
+              <h4 class="exp-bento-title">Undergraduate Robotics Research Assistant</h4>
+              <p class="exp-bento-org">Robotics Laboratory & MAD Robotics — UPM</p>
+              <p class="exp-bento-desc">
+                Awarded the national <strong>Departmental Research Fellowship by the Ministry of Education</strong> to
+                conduct research within the UPM Robotics Laboratory.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- ITEM 2: SIEMENS -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <span class="timeline-date">Feb 2026 - Jul 2026</span>
-                <h3 class="timeline-title">Production Machine Automation Intern</h3>
-                <h4 class="timeline-subtitle">SIEMENS</h4>
-              </div>
-              <div class="timeline-logo-badge siemens-badge" title="SIEMENS">
-                <img src="siemens_logo.png" alt="SIEMENS Logo" class="timeline-logo-img siemens-logo-img">
-              </div>
+        <!-- COLUMN 2: ACADEMIC FORMATION -->
+        <div class="exp-column exp-column-edu">
+          <div class="exp-column-header">
+            <div class="exp-col-title-wrap">
+              <span class="exp-col-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </span>
+              <h3 class="exp-column-heading">Education & Honors</h3>
             </div>
-
-            <ul class="timeline-bullets">
-              <li>Developed 3D Digital Twins and virtual commissioning solutions within the field of industrial robot
-                cells and production machine automation.</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- ITEM 3: RESEARCH ASSISTANT / BECA COLABORACION -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <span class="timeline-date">2025 - 2026</span>
-                <h3 class="timeline-title">Undergraduate Robotics Research Assistant</h3>
-                <h4 class="timeline-subtitle">
-                  <span class="org-icon">🤖</span> Robotics Laboratory & MAD Robotics — UPM
-                </h4>
+          <div class="exp-cards-list">
+            <!-- ITEM 3: MASTER UPM -->
+            <div class="exp-bento-card glass-card exp-card-edu exp-card-featured">
+              <div class="exp-bento-top">
+                <div class="exp-bento-date-group">
+                  <span class="exp-bento-date">2026 — Present</span>
+                  <span class="exp-bento-live"><span class="exp-pulse-dot"></span> Current</span>
+                </div>
+                <div class="exp-bento-logo">
+                  <img src="UPM_LOGO.png" alt="UPM Logo" class="bento-logo-img upm-logo-img">
+                </div>
               </div>
-              <div class="timeline-logo-badge robot-badge" title="MAD Robotics UPM">
-                <img src="MAD_ROBOTICS.png" alt="MAD Robotics Logo" class="timeline-logo-img mad-logo-img">
-              </div>
+              <h4 class="exp-bento-title">Master's Degree in Automation & Robotics</h4>
+              <p class="exp-bento-org">Universidad Politécnica de Madrid (UPM)</p>
+              <p class="exp-bento-desc">
+                Currently pursuing a Master's degree specializing in advanced automatic control systems, robotic
+                perception, artificial intelligence, and smart industrial automation.
+              </p>
             </div>
 
-            <ul class="timeline-bullets">
-              <li>Awarded the national <strong>Departmental Research Fellowship by the Ministry of Education to conduct
-                  research within the UPM Robotics Laboratory</strong>.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- ITEM 4: DEGREE UPM -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <span class="timeline-date">2022 - 2026</span>
-                <h3 class="timeline-title">B.Sc. in Industrial Electronics & Automation Engineering</h3>
-                <h4 class="timeline-subtitle">
-                  <span class="org-icon">🏛️</span> Universidad Politécnica de Madrid (UPM)
-                </h4>
+            <!-- ITEM 4: DEGREE UPM -->
+            <div class="exp-bento-card glass-card exp-card-edu">
+              <div class="exp-bento-top">
+                <span class="exp-bento-date">2022 — 2026</span>
+                <div class="exp-bento-logo">
+                  <img src="UPM_LOGO.png" alt="UPM Logo" class="bento-logo-img upm-logo-img">
+                </div>
               </div>
-              <div class="timeline-logo-badge honor-badge" title="ETSIDI UPM - 8 Matrículas de Honor">
-                <img src="UPM_LOGO.png" alt="UPM ETSIDI Logo" class="timeline-logo-img upm-logo-img">
-              </div>
-            </div>
-
-            <!-- STAT HIGHLIGHT BOXES -->
-            <div class="timeline-highlights-row">
-              <div class="timeline-highlight-box">
-                <span class="hl-value">8</span>
-                <span class="hl-label">Academic Honors</span>
-              </div>
-              <div class="timeline-highlight-box">
-                <span class="hl-value">2x</span>
-                <span class="hl-label">Excellence Scholarship</span>
-              </div>
-              <div class="timeline-highlight-box">
-                <span class="hl-value">CREA</span>
-                <span class="hl-label">Electronics, Robotics & Automation Club</span>
-              </div>
+              <h4 class="exp-bento-title">B.Sc. in Industrial Electronics & Automation Engineering</h4>
+              <p class="exp-bento-org">Universidad Politécnica de Madrid (UPM)</p>
+              <p class="exp-bento-desc">
+                Awarded 8 Academic Honors (Matrículas de Honor) and 2 Excellence Scholarships. Active member of
+                the Robotics, Electronics & Automation Club.
+              </p>
             </div>
           </div>
         </div>
@@ -1015,10 +993,16 @@
 
           <div class="modal-text-block">
             <p class="modal-paragraph">
-              Developed alongside four peers during my engineering degree, <strong>Balbo Chess</strong> is an interactive 2D game engine programmed in <strong>C++</strong> (Visual Studio) and rendered with <strong>freeglut / OpenGL</strong>. Built on <strong>Object-Oriented Programming</strong> principles (inheritance and polymorphism), it implements the strategic <em>Balbo's Chess</em> variant on a custom diamond board with pieces themed as rival UPM engineering faculties.
+              Developed alongside four peers during my engineering degree, <strong>Balbo Chess</strong> is an
+              interactive 2D game engine programmed in <strong>C++</strong> (Visual Studio) and rendered with
+              <strong>freeglut / OpenGL</strong>. Built on <strong>Object-Oriented Programming</strong> principles
+              (inheritance and polymorphism), it implements the strategic <em>Balbo's Chess</em> variant on a custom
+              diamond board with pieces themed as rival UPM engineering faculties.
             </p>
             <p class="modal-paragraph">
-              For solo play against the machine, we integrated an autonomous <strong>AI engine</strong> powered by the <strong>Minimax algorithm</strong> with <strong>Alpha-Beta pruning</strong> and <strong>variable search depth</strong>, balancing deep tactical calculation with instantaneous response.
+              For solo play against the machine, we integrated an autonomous <strong>AI engine</strong> powered by the
+              <strong>Minimax algorithm</strong> with <strong>Alpha-Beta pruning</strong> and <strong>variable search
+                depth</strong>, balancing deep tactical calculation with instantaneous response.
             </p>
           </div>
         </div>
