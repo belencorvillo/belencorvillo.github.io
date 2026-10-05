@@ -167,7 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Message sent successfully! Thank you for reaching out.');
+      const name = document.getElementById('name')?.value.trim() || 'Visitor';
+      const email = document.getElementById('email')?.value.trim() || '';
+      const message = document.getElementById('message')?.value.trim() || '';
+
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`Hi Belén,\n\n${message}\n\n---\nFrom: ${name} (${email})`);
+
+      window.location.href = `mailto:becorvillo14@gmail.com?subject=${subject}&body=${body}`;
+
+      showToast('Opening your email client to send message...');
       contactForm.reset();
     });
   }
