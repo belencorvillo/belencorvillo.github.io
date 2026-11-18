@@ -1,1002 +1,726 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belén Corvillo Guerra — Robotics &amp; Automation Engineer</title>
   <meta name="description"
-    content="Portfolio of Belén Corvillo Guerra - Industrial Electronics & Automation Engineer specializing in Robotics, Embedded Systems, Inverse Kinematics, and C++/Python Development.">
+    content="Belén Corvillo Guerra — robotics and automation engineer. Legged robots, manipulators, virtual commissioning and learning-based control, from mechanical design to firmware.">
   <meta name="author" content="Belén Corvillo Guerra">
-  <title>Belén Corvillo Guerra | Industrial Electronics & Robotics Engineer</title>
+  <meta name="theme-color" content="#FBF4EC">
+  <meta property="og:title" content="Belén Corvillo Guerra — Robotics &amp; Automation Engineer">
+  <meta property="og:description"
+    content="Robots that walk, reach and learn. Selected robotics, automation and embedded projects.">
+  <meta property="og:image" content="https://belencorvillo.github.io/TARANTULA_card.png">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23D2301E'/%3E%3Ccircle cx='10.5' cy='21.5' r='2.6' fill='none' stroke='%23FBF4EC' stroke-width='2'/%3E%3Cpath d='M10.5 21.5 L15.5 11 L23 14.5' fill='none' stroke='%23FBF4EC' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='23' cy='14.5' r='2.4' fill='%23FBF4EC'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path
+        d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3" />
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#projects">Skip to projects</a>
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">
-        <span class="nav-logo-icon">B</span>
-        <span>Belén Corvillo</span>
+  <!-- ================================================================ NAV -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Belén Corvillo, back to top">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26">
+            <circle cx="10.5" cy="21.5" r="2.6" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M10.5 21.5 L15.5 11 L23 14.5" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="23" cy="14.5" r="2.4" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="nav__name">Belén Corvillo<small>Robotics Engineer</small></span>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer" class="nav-link">Connect</a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <!-- mobile only: CV + profiles live inside the menu -->
+        <div class="nav__extras">
+          <a class="nav__extra" href="CV_Belen_Corvillo_Guerra.pdf" target="_blank" rel="noopener noreferrer"><span>EN</span> CV</a>
+          <a class="nav__extra" href="CV_Belen_Corvillo_Guerra_ES.pdf" target="_blank" rel="noopener noreferrer"><span>ES</span> CV</a>
+          <a class="nav__icon" href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin" /></svg>
+          </a>
+          <a class="nav__icon" href="https://github.com/belencorvillo" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github" /></svg>
+          </a>
+        </div>
       </nav>
 
-      <div class="nav-actions">
-        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
-          <svg class="moon-icon" viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="sun-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-
-        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+      <div class="nav__actions">
+        <div class="cv">
+          <button class="cv__btn" id="cv-btn" aria-expanded="false" aria-controls="cv-menu" aria-haspopup="true">
+            CV
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div class="cv__menu" id="cv-menu" hidden>
+            <a href="CV_Belen_Corvillo_Guerra.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="cv__lang">EN</span> English <small>PDF</small>
+            </a>
+            <a href="CV_Belen_Corvillo_Guerra_ES.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="cv__lang">ES</span> Español <small>PDF</small>
+            </a>
+          </div>
+        </div>
+        <a class="nav__icon" href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin" /></svg>
+        </a>
+        <a class="nav__icon" href="https://github.com/belencorvillo" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github" /></svg>
+        </a>
       </div>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <span class="status-dot"></span>
-            <span class="hero-badge-text">Open for Engineering & Robotics Roles</span>
-          </div>
-
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Belén Corvillo</span>
-          </h1>
-          <h2 class="hero-subtitle-typing">
-            I am a <span id="typed-text" class="typed-text"></span><span class="typed-cursor">_</span>
-          </h2>
-
-          <p class="hero-subtitle">
-            <strong>Industrial Electronics & Automation Engineer</strong> passionate about robotics systems, dedicated
-            to bringing autonomous and intelligent robots to life through embedded hardware and control.
+  <main id="top">
+    <!-- ================================================================ HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy reveal">
+          <svg class="star hero__star" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" />
+          </svg>
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Robotics &amp; Automation Engineer · open to roles
           </p>
 
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary" id="btn-view-projects">
-              View Featured Projects
-              <svg viewBox="0 0 24 24">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+          <h1 class="hero__title">
+            Robots that <em>walk</em>, reach &amp;&nbsp;<em>learn</em>.
+          </h1>
+
+          <p class="hero__lede">
+            I'm Belén Corvillo, an Industrial Electronics &amp; Automation engineer. I build robots end to end:
+            the mechanical design, the custom electronics, the real-time control and the software that holds it all
+            together.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--accent">
+              Selected work
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-connect">CONNECT WITH ME!</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
           </div>
+          <span class="hero__dots" aria-hidden="true"></span>
         </div>
 
-        <!-- HERO VISUAL -->
-        <div class="hero-visual">
-          <div class="glass-card hero-avatar-card">
-            <img src="CARNET_edited.png" alt="Belén Corvillo Guerra" class="hero-only-photo">
+        <figure class="instrument reveal" aria-label="Interactive 3-DOF robot arm solving inverse kinematics">
+          <div class="instrument__stage">
+            <canvas id="ik-canvas"></canvas>
+            <p class="instrument__hint" aria-hidden="true">Move your cursor here to drive the gripper</p>
+          </div>
+          <dl class="instrument__readout" aria-live="off">
+            <div><dt>θ₁</dt><dd id="ro-q1">0.0°</dd></div>
+            <div><dt>θ₂</dt><dd id="ro-q2">0.0°</dd></div>
+            <div><dt>x</dt><dd id="ro-x">0.00</dd></div>
+            <div><dt>y</dt><dd id="ro-y">0.00</dd></div>
+          </dl>
+        </figure>
+      </div>
+
+    </section>
+
+    <!-- ================================================================ WORK -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="label"><span>01</span> Projects</p>
+          <h2 class="section__title">Hardware that moves, <em>software that decides.</em></h2>
+        </header>
+      </div>
+
+      <!-- Featured: TARANTULA -->
+      <div class="wrap">
+        <article class="feature reveal">
+          <button class="feature__hit" data-project="tarantula"
+            aria-label="Open TARANTULA: full video and details"></button>
+          <div class="feature__media">
+            <div class="spider" id="spider3d" role="img"
+              aria-label="Interactive 3D model of the TARANTULA quadruped, built from its CAD assembly. Drag to rotate.">
+              <span class="spider__loading" aria-hidden="true">Loading 3D model</span>
+              <img class="spider__fallback" src="TARANTULA_card.png" alt="" width="896" height="1200" loading="lazy">
+            </div>
+            <div class="spider__ui">
+              <button class="spider__play" data-project="tarantula">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>Watch <span class="spider__long">the real robot</span><span class="spider__short">video</span></span>
+              </button>
+              <span class="spider__tag">3D · from the CAD assembly</span>
+            </div>
+            <p class="spider__hint" aria-hidden="true">Drag to rotate</p>
+          </div>
+          <div class="feature__body">
+            <h3 class="feature__title">TARANTULA</h3>
+            <p class="feature__lede">
+              A modular quadruped built for inspection in confined and hazardous spaces. Fully vertically reversible,
+              so it keeps working even when flipped upside down.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Robotics projects -->
+      <div class="wrap">
+        <div class="work-grid">
+          <article class="card reveal">
+            <button class="card__hit" data-project="delta-twin" aria-label="Open Dual Delta Digital Twin"></button>
+            <div class="card__media">
+              <img src="webinar_kin_collision.png" alt="Two delta robots picking parts from conveyors in a 3D digital twin"
+                loading="lazy" width="1712" height="962">
+              <span class="card__play" aria-hidden="true">Video</span>
+            </div>
+            <p class="kicker"><span>P—02</span> Virtual commissioning</p>
+            <h3 class="card__title">Dual Delta Digital Twin</h3>
+            <p class="card__desc">Pick-and-place cell with two delta robots sharing one workspace, with real-time
+              collision avoidance.</p>
+            <ul class="tags">
+              <li>TIA Portal</li>
+              <li>SIMIT</li>
+              <li>Siemens NX</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <button class="card__hit" data-project="ml-plc" aria-label="Open Machine Learning in PLC Control"></button>
+            <div class="card__media">
+              <img src="ml_cell_real.webp" alt="Gantry pick-and-place cell over two conveyor belts in the virtual commissioning model"
+                loading="lazy" width="853" height="640">
+              <span class="card__play" aria-hidden="true">Video</span>
+            </div>
+            <p class="kicker"><span>P—03</span> Reinforcement learning · PLC</p>
+            <h3 class="card__title">Self-optimising Pick &amp; Place</h3>
+            <p class="card__desc">A PPO agent that tunes the kinematics of an industrial cell live, trading cycle time
+              against energy.</p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>PPO</li>
+              <li>OPC UA</li>
+              <li>Gymnasium</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <button class="card__hit" data-project="moyabot" aria-label="Open MoyaBot"></button>
+            <div class="card__media">
+              <img src="MOYABOT.jpeg" alt="MoyaBot robotic arm over a sand tray on a workbench" loading="lazy"
+                width="1200" height="954">
+              <span class="card__play" aria-hidden="true">Video</span>
+            </div>
+            <p class="kicker"><span>P—04</span> Manipulation</p>
+            <h3 class="card__title">MoyaBot</h3>
+            <p class="card__desc">A 5-DOF arm that scoops sand and lays it down on a controlled surface. Cycloidal
+              gearing and closed-loop PID.</p>
+            <ul class="tags">
+              <li>5 DOF</li>
+              <li>PID</li>
+              <li>Cycloidal gears</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <button class="card__hit" data-project="tunabot" aria-label="Open TUNABOT"></button>
+            <div class="card__media">
+              <img src="TUNABOT.jpg" alt="White bio-inspired tuna robot shell on a lab bench" loading="lazy"
+                width="1280" height="960">
+              <span class="card__play" aria-hidden="true">Gallery</span>
+            </div>
+            <p class="kicker"><span>P—05</span> Bio-inspired robotics · CSIC</p>
+            <h3 class="card__title">TUNABOT</h3>
+            <p class="card__desc">Two educational robots for ocean literacy: a colour-tracking mobile robot and a
+              swimming tuna replica.</p>
+            <ul class="tags">
+              <li>Computer vision</li>
+              <li>Biomimetics</li>
+              <li>STEAM</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- Also built -->
+      <div class="wrap">
+        <div class="also">
+          <p class="label also__label"><span>—</span> Also built</p>
+          <div class="also-grid">
+            <article class="card card--sm reveal">
+              <button class="card__hit" data-project="escaperoom" aria-label="Open Escaperoom Cube"></button>
+              <div class="card__media">
+                <img src="ESCAPEROOM%20CUBE.jpg" alt="STM32 puzzle console with knobs, switches and a colour wheel"
+                  loading="lazy" width="1280" height="749">
+              </div>
+              <p class="kicker"><span>P—06</span> Embedded · STM32</p>
+              <h3 class="card__title">Escaperoom Cube</h3>
+            </article>
+
+            <article class="card card--sm reveal">
+              <button class="card__hit" data-project="fpga-hero" aria-label="Open FPGA Hero"></button>
+              <div class="card__media">
+                <img src="FPGA_HERO.jpg" alt="Rhythm game running on a monitor driven by an FPGA board" loading="lazy"
+                  width="463" height="800">
+              </div>
+              <p class="kicker"><span>P—07</span> Digital hardware · VHDL</p>
+              <h3 class="card__title">FPGA Hero</h3>
+            </article>
+
+            <article class="card card--sm reveal">
+              <button class="card__hit" data-project="chess" aria-label="Open Balbo Chess"></button>
+              <div class="card__media">
+                <img src="chess_card.png" alt="Diamond-shaped chess board rendered in OpenGL" loading="lazy" width="896"
+                  height="1200">
+              </div>
+              <p class="kicker"><span>P—08</span> Software · C++</p>
+              <h3 class="card__title">Balbo Chess</h3>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS SECTION -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Projects</h2>
+    <!-- ================================================================ SKILLS -->
+    <section class="section section--rule" id="skills">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="label"><span>02</span> Skills</p>
+          <h2 class="section__title">The full stack, <em>from chassis to code.</em></h2>
+        </header>
+
+        <ul class="caps">
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-robotics.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Robotics &amp; control</h3>
+            <p class="caps__tools">Inverse&nbsp;kinematics · Impedance&nbsp;control · PID · Gait&nbsp;design · Reinforcement&nbsp;learning&nbsp;(PPO)</p>
+          </li>
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-embedded.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Embedded &amp; electronics</h3>
+            <p class="caps__tools">C&nbsp;/&nbsp;C++ · STM32Cube · ESP32 · Arduino · PCB&nbsp;design · LTspice · CAN · SPI · I²C</p>
+          </li>
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-automation.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Industrial automation</h3>
+            <p class="caps__tools">TIA&nbsp;Portal · PLCSIM · SIMIT · OPC&nbsp;UA · Virtual&nbsp;commissioning · Siemens&nbsp;NX</p>
+          </li>
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-fpga.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Digital hardware</h3>
+            <p class="caps__tools">VHDL · AMD&nbsp;/&nbsp;Xilinx&nbsp;Vivado</p>
+          </li>
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-software.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Software &amp; simulation</h3>
+            <p class="caps__tools">Python · C++ · Qt6 · MATLAB&nbsp;/&nbsp;Simulink · FlexSim · Gymnasium</p>
+          </li>
+          <li class="caps__row reveal">
+            <img class="caps__icon" src="icons/skill-mechanical.webp" alt="" width="300" height="300" loading="lazy">
+            <h3 class="caps__title">Mechanical design</h3>
+            <p class="caps__tools">Autodesk&nbsp;Fusion · AutoCAD · Carbon&nbsp;fibre&nbsp;&amp;&nbsp;printed&nbsp;structures</p>
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <div class="projects-grid">
-        <!-- ROW 1, CARD 1: TARANTULA -->
-        <div class="glass-card project-card-interactive" id="card-tarantula" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="TARANTULA_card.png" alt="TARANTULA Modular Arachnid Quadruped Robot" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>TARANTULA</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">TARANTULA</h3>
-            <p class="overlay-desc">Modular Arachnid Quadruped Robot</p>
-            <button class="btn btn-primary btn-explore" id="open-tarantula-modal"
-              aria-label="Explore TARANTULA project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
+    <!-- ================================================================ EXPERIENCE -->
+    <section class="section section--rule" id="experience">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="label"><span>03</span> Experience</p>
+          <h2 class="section__title">From the lab <em>to the real world.</em></h2>
+        </header>
+
+        <div class="intro">
+          <figure class="portrait reveal">
+            <img src="me_nasa.webp" alt="Belén Corvillo Guerra smiling in front of an Earth backdrop at the NASA Space Apps Challenge"
+              loading="lazy" width="880" height="1100">
+            <figcaption>Me at the NASA Space Apps Challenge 2026 <span aria-hidden="true">:)</span></figcaption>
+          </figure>
+          <p class="about__statement reveal">
+            I like robots that leave the simulator. My work sits where <em>mechanics, electronics and control</em>
+            meet: designing the structure, routing the board, writing the kinematics, then tuning it on the real
+            machine until it behaves.
+          </p>
         </div>
 
-        <!-- ROW 1, CARD 2: DUAL DELTA DIGITAL TWIN -->
-        <div class="glass-card project-card-interactive" id="card-delta-twin" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="webinar_kin_collision.png" alt="Dual Delta Robot Digital Twin" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>DUAL DELTA DIGITAL TWIN</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">DUAL DELTA DIGITAL TWIN</h3>
-            <p class="overlay-desc">Virtual Commissioning & 3D Digital Twin: Dual Delta Robot Pick-and-Place System</p>
-            <button class="btn btn-primary btn-explore" id="open-delta-twin-modal"
-              aria-label="Explore Dual Delta Digital Twin project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 1, CARD 3: MOYABOT -->
-        <div class="glass-card project-card-interactive" id="card-moyabot" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="MOYABOT.jpeg" alt="MoyaBot 5-DOF Robotic Arm" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>MOYABOT</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">MOYABOT</h3>
-            <p class="overlay-desc">5-DOF robotic arm capable of collecting sand and depositing it onto a controlled
-              surface.</p>
-            <button class="btn btn-primary btn-explore" id="open-moyabot-modal" aria-label="Explore MoyaBot project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 2, CARD 1: ML IN PLC CONTROL -->
-        <div class="glass-card project-card-interactive" id="card-ml-plc" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="MACHINELEARNING_foto.png" alt="Machine Learning in PLC Control" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>ML IN PLC CONTROL</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">ML IN PLC CONTROL</h3>
-            <p class="overlay-desc">Self-Optimizing Pick & Place Cell via Reinforcement Learning</p>
-            <button class="btn btn-primary btn-explore" id="open-ml-plc-modal"
-              aria-label="Explore Machine Learning in PLC Control project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 2, CARD 2: TUNABOT -->
-        <div class="glass-card project-card-interactive" id="card-tunabot" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="TUNABOT.jpg" alt="TUNABOT Bioinspired Robot" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>TUNABOT</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">TUNABOT</h3>
-            <p class="overlay-desc">Bioinspired robotics engineered for educational outreach and oceanic awareness.</p>
-            <button class="btn btn-primary btn-explore" id="open-tunabot-modal" aria-label="Explore TUNABOT project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 2, CARD 3: FPGA_HERO -->
-        <div class="glass-card project-card-interactive" id="card-fpga-hero" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="FPGA_HERO.jpg" alt="FPGA HERO Game Engine" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>FPGA HERO</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">FPGA HERO</h3>
-            <p class="overlay-desc">Hardware-Level Game Engine & Audio Synthesizer (FPGA)</p>
-            <button class="btn btn-primary btn-explore" id="open-fpga-hero-modal"
-              aria-label="Explore FPGA HERO project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 3, CARD 1: ESCAPEROOM CUBE -->
-        <div class="glass-card project-card-interactive" id="card-escaperoom" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="ESCAPEROOM%20CUBE.jpg" alt="ESCAPEROOM CUBE STM32 Console" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>ESCAPEROOM CUBE</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">ESCAPEROOM CUBE</h3>
-            <p class="overlay-desc">STM32 Hardware Puzzle Console & Sensor Integration</p>
-            <button class="btn btn-primary btn-explore" id="open-escaperoom-modal"
-              aria-label="Explore ESCAPEROOM CUBE project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- ROW 3, CARD 2: BALBO CHESS -->
-        <div class="glass-card project-card-interactive" id="card-chess" tabindex="0">
-          <div class="project-card-image-wrap">
-            <img src="chess_card.png" alt="Balbo's Chess C++ Game Engine" class="project-card-img">
-            <div class="project-card-title-default">
-              <h3>BALBO CHESS</h3>
-            </div>
-          </div>
-          <div class="project-card-overlay">
-            <h3 class="overlay-title">BALBO CHESS</h3>
-            <p class="overlay-desc">Object-Oriented C++ Game Engine with Minimax AI & Alpha-Beta Pruning</p>
-            <button class="btn btn-primary btn-explore" id="open-chess-modal" aria-label="Explore Balbo Chess project">
-              Explore
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Skills</h2>
-      </div>
-
-      <div class="skills-grid-cards">
-        <!-- CARD 1 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/c-logo-icon-28389.png" alt="C, C++, Python logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">C, C++, Python</p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/Matlab_Logo.png" alt="MATLAB / Simulink logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">MATLAB/SIMULINK, FlexSim</p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/microchip.png" alt="Arduino, ESP32, STM32 Cube logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">Arduino, ESP32, STM32 Cube</p>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/plc.png" alt="TIA Portal, PLCSIM, SIMIT logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">TIA Portal, PLCSIM, SIMIT</p>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/CAD.png" alt="AutoCAD, Autodesk Fusion logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">AutoCAD, Autodesk Fusion</p>
-        </div>
-
-        <!-- CARD 6 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/FPGA.png" alt="VHDL, AMD/Xilinx Vivado logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">VHDL, AMD/Xilinx Vivado</p>
-        </div>
-
-        <!-- CARD 7 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/PCB.png" alt="LTSpice, PCB design logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">LTSpice, PCB design</p>
-        </div>
-
-        <!-- CARD 8 -->
-        <div class="skill-card-item glass-card">
-          <div class="skill-card-icon">
-            <img src="logos/QT6.png" alt="Qt6 logo" class="skill-card-img">
-          </div>
-          <p class="skill-card-text">Qt6</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE & EDUCATION SECTION -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Education & Professional Experience</h2>
-      </div>
-
-      <div class="exp-bento-grid">
-        <!-- COLUMN 1: WORK & RESEARCH EXPERIENCE -->
-        <div class="exp-column exp-column-work">
-          <div class="exp-column-header">
-            <div class="exp-col-title-wrap">
-              <span class="exp-col-icon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        <div class="exp">
+          <div class="exp__col">
+            <h3 class="exp__heading">
+              <span class="exp__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="7" width="18" height="13" rx="2.5" />
+                  <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18" />
                 </svg>
               </span>
-              <h3 class="exp-column-heading">Work & Research</h3>
-            </div>
+              Work &amp; Research
+            </h3>
+
+            <article class="exp__card reveal">
+              <div class="exp__top">
+                <span class="exp__date">Feb — Jul 2026</span>
+                <img class="exp__logo exp__logo--siemens" src="logos-mono/logo-siemens.png" alt="Siemens" width="511" height="96" loading="lazy">
+              </div>
+              <h4 class="exp__role">Production Machine Automation Intern</h4>
+              <p class="exp__org">Siemens</p>
+              <p class="exp__desc">Developed 3D digital twins and virtual commissioning solutions for industrial robot
+                cells and production machine automation.</p>
+            </article>
+
+            <article class="exp__card reveal">
+              <div class="exp__top">
+                <span class="exp__date">2025 — 2026</span>
+                <img class="exp__logo exp__logo--mad" src="logos-mono/logo-mad.png" alt="MAD Robotics" width="620" height="120" loading="lazy">
+              </div>
+              <h4 class="exp__role">Undergraduate Robotics Research Assistant</h4>
+              <p class="exp__org">Robotics Laboratory &amp; MAD Robotics — UPM</p>
+              <p class="exp__desc">Awarded the national <strong>Departmental Research Fellowship</strong> by the Ministry
+                of Education to carry out research in the UPM Robotics Laboratory.</p>
+            </article>
           </div>
 
-          <div class="exp-cards-list">
-            <!-- ITEM 1: SIEMENS -->
-            <div class="exp-bento-card glass-card exp-card-work">
-              <div class="exp-bento-top">
-                <span class="exp-bento-date">Feb 2026 — Jul 2026</span>
-                <div class="exp-bento-logo">
-                  <img src="siemens_logo.png" alt="SIEMENS Logo" class="bento-logo-img siemens-logo-img">
-                </div>
-              </div>
-              <h4 class="exp-bento-title">Production Machine Automation Intern</h4>
-              <p class="exp-bento-org">SIEMENS</p>
-              <p class="exp-bento-desc">
-                Developed 3D Digital Twins and virtual commissioning solutions within the field of industrial robot
-                cells and production machine automation.
-              </p>
-            </div>
-
-            <!-- ITEM 2: RESEARCH ASSISTANT / BECA COLABORACION -->
-            <div class="exp-bento-card glass-card exp-card-work">
-              <div class="exp-bento-top">
-                <span class="exp-bento-date">2025 — 2026</span>
-                <div class="exp-bento-logo">
-                  <img src="MAD_ROBOTICS.png" alt="MAD Robotics Logo" class="bento-logo-img mad-logo-img">
-                </div>
-              </div>
-              <h4 class="exp-bento-title">Undergraduate Robotics Research Assistant</h4>
-              <p class="exp-bento-org">Robotics Laboratory & MAD Robotics — UPM</p>
-              <p class="exp-bento-desc">
-                Awarded the national <strong>Departmental Research Fellowship by the Ministry of Education</strong> to
-                conduct research within the UPM Robotics Laboratory.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- COLUMN 2: ACADEMIC FORMATION -->
-        <div class="exp-column exp-column-edu">
-          <div class="exp-column-header">
-            <div class="exp-col-title-wrap">
-              <span class="exp-col-icon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          <div class="exp__col">
+            <h3 class="exp__heading">
+              <span class="exp__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2.5 9.5 12 5l9.5 4.5L12 14z" />
+                  <path d="M6.5 11.5v4.2c3 2.4 8 2.4 11 0v-4.2M21.5 9.5V15" />
                 </svg>
               </span>
-              <h3 class="exp-column-heading">Education & Honors</h3>
-            </div>
-          </div>
+              Education &amp; Honors
+            </h3>
 
-          <div class="exp-cards-list">
-            <!-- ITEM 3: MASTER UPM -->
-            <div class="exp-bento-card glass-card exp-card-edu exp-card-featured">
-              <div class="exp-bento-top">
-                <div class="exp-bento-date-group">
-                  <span class="exp-bento-date">2026 — Present</span>
-                  <span class="exp-bento-live"><span class="exp-pulse-dot"></span> Current</span>
-                </div>
-                <div class="exp-bento-logo">
-                  <img src="UPM_LOGO.png" alt="UPM Logo" class="bento-logo-img upm-logo-img">
-                </div>
+            <article class="exp__card exp__card--current reveal">
+              <div class="exp__top">
+                <span class="exp__date">2026 — Present <span class="exp__now">Current</span></span>
+                <img class="exp__logo exp__logo--upm" src="logos-mono/logo-upm.png" alt="Universidad Politécnica de Madrid" width="195" height="200" loading="lazy">
               </div>
-              <h4 class="exp-bento-title">Master's Degree in Automation & Robotics</h4>
-              <p class="exp-bento-org">Universidad Politécnica de Madrid (UPM)</p>
-              <p class="exp-bento-desc">
-                Currently pursuing a Master's degree specializing in advanced automatic control systems, robotic
-                perception, artificial intelligence, and smart industrial automation.
-              </p>
-            </div>
+              <h4 class="exp__role">MSc in Automation &amp; Robotics</h4>
+              <p class="exp__org">Universidad Politécnica de Madrid</p>
+              <p class="exp__desc">Specialising in advanced automatic control, robotic perception, artificial
+                intelligence and smart industrial automation.</p>
+            </article>
 
-            <!-- ITEM 4: DEGREE UPM -->
-            <div class="exp-bento-card glass-card exp-card-edu">
-              <div class="exp-bento-top">
-                <span class="exp-bento-date">2022 — 2026</span>
-                <div class="exp-bento-logo">
-                  <img src="UPM_LOGO.png" alt="UPM Logo" class="bento-logo-img upm-logo-img">
-                </div>
+            <article class="exp__card reveal">
+              <div class="exp__top">
+                <span class="exp__date">2022 — 2026</span>
+                <img class="exp__logo exp__logo--upm" src="logos-mono/logo-upm.png" alt="Universidad Politécnica de Madrid" width="195" height="200" loading="lazy">
               </div>
-              <h4 class="exp-bento-title">B.Sc. in Industrial Electronics & Automation Engineering</h4>
-              <p class="exp-bento-org">Universidad Politécnica de Madrid (UPM)</p>
-              <p class="exp-bento-desc">
-                Awarded 8 Academic Honors (Matrículas de Honor) and 2 Excellence Scholarships. Active member of
-                the Robotics, Electronics & Automation Club.
-              </p>
-            </div>
+              <h4 class="exp__role">B.Sc. in Industrial Electronics &amp; Automation Engineering</h4>
+              <p class="exp__org">Universidad Politécnica de Madrid</p>
+              <p class="exp__desc"><strong>9 Matrículas de Honor</strong> and <strong>2 excellence
+                  scholarships</strong>. Active member of the Robotics, Electronics &amp; Automation Club.</p>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-description">Interested in working together or discussing robotics engineering? Drop a line!
-        </p>
-      </div>
-
-      <div class="contact-container">
-        <div class="glass-card contact-info-card">
-          <div>
-            <h3 style="font-size:1.4rem; font-weight:700; color:var(--text-primary); margin-bottom:12px;">Contact
-              Information</h3>
-            <p style="color:var(--text-secondary); font-size:0.95rem;">Feel free to reach out directly via LinkedIn or
-              use the contact form.</p>
-
-            <div class="contact-detail-list">
-              <div class="contact-detail-item">
-                <div class="contact-icon-box">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
-                  </svg>
-                </div>
-                <div class="contact-detail-text">
-                  <span>LinkedIn Profile</span>
-                  <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank"
-                    rel="noopener noreferrer">belen-corvillo-guerra</a>
-                </div>
-              </div>
-
-              <div class="contact-detail-item">
-                <div class="contact-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                </div>
-                <div class="contact-detail-text">
-                  <span>Direct Message</span>
-                  <a href="mailto:becorvillo14@gmail.com">Send an Email</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://www.linkedin.com/in/belen-corvillo-guerra/" target="_blank" rel="noopener noreferrer"
-            class="btn btn-primary" style="width:100%;">
-            Connect on LinkedIn
-            <svg viewBox="0 0 24 24">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+    <!-- ================================================================ CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="label label--dark reveal"><span>04</span> Contact</p>
+        <h2 class="contact__title reveal">Let's build something<br>that <em>moves</em>.</h2>
+        <p class="contact__lede reveal">Open to robotics, automation and embedded engineering roles. The fastest way
+          to reach me is email or LinkedIn.</p>
+        <div class="contact__actions reveal">
+          <a class="btn btn--accent btn--lg" href="mailto:becorvillo14@gmail.com">
+            Send an email
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+          <a class="btn btn--ghost-dark btn--lg" href="https://www.linkedin.com/in/belen-corvillo-guerra/"
+            target="_blank" rel="noopener noreferrer">
+            LinkedIn
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M8 7h9v9" />
             </svg>
           </a>
         </div>
-
-        <div class="glass-card contact-form-card">
-          <form id="contact-form" action="mailto:becorvillo14@gmail.com" method="POST" enctype="text/plain">
-            <div class="form-group">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" id="name" class="form-input" placeholder="e.g. Alex Rivera" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email" class="form-label">Your Email</label>
-              <input type="email" id="email" class="form-input" placeholder="e.g. alex@example.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="message" class="form-label">Message</label>
-              <textarea id="message" class="form-textarea" placeholder="Hi Belén, I'd love to connect regarding..."
-                required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Send Message
-              <svg viewBox="0 0 24 24">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </button>
-          </form>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p class="footer-text">&copy; 2026 Belén Corvillo Guerra. All rights reserved.</p>
+      <footer class="footer">
+        <div class="wrap footer__inner">
+          <span>© 2026 Belén Corvillo Guerra</span>
+          <span class="footer__mid">Robotics · Automation · Embedded</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </section>
+  </main>
 
-      <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="19" x2="12" y2="5"></line>
-          <polyline points="5 12 12 5 19 12"></polyline>
+  <!-- ================================================================ PROJECT DIALOG -->
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+    <div class="sheet__bar">
+      <span class="sheet__index" id="sheet-index"></span>
+      <button class="sheet__close" id="sheet-close" aria-label="Close project">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" />
         </svg>
       </button>
     </div>
-  </footer>
+    <div class="sheet__content" id="sheet-content"></div>
+  </dialog>
 
-  <!-- PROJECT DETAIL MODAL: MOYABOT -->
-  <div class="modal-overlay" id="moyabot-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-moyabot-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+  <!-- Project content lives in templates so it stays editable as plain HTML -->
+  <template id="p-tarantula">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="TARANTULA_foto.png">
+        <source src="VIDEO_TARANTULA.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="sheet__info">
+      <h2 class="sheet__title" id="sheet-title">TARANTULA</h2>
+      <p>My undergraduate thesis: a custom quadruped designed for complex inspection in confined and hazardous
+        spaces.</p>
+      <p>Months of R&amp;D went into the hardware. I designed it in <strong>Autodesk Fusion</strong> as a machined
+        carbon fibre and ASA structure that stays under <strong>7 kg</strong>. It is fully vertically reversible, so
+        it keeps operating if it is flipped upside down.</p>
+      <p>On the software and electronics side I derived the maths for <strong>real-time 6-DOF inverse
+          kinematics</strong> on a custom C++ architecture, added <strong>active impedance control</strong> to absorb
+        impacts, programmed two locomotion gaits, and designed a PCB with <strong>CAN bus telemetry</strong> and
+        <strong>Hall-effect sensors</strong> for tactile ground detection.</p>
+      <dl class="spec spec--light">
+        <div><dt>Mass</dt><dd>&lt; 7 kg</dd></div>
+        <div><dt>Structure</dt><dd>Carbon fibre + ASA</dd></div>
+        <div><dt>Control</dt><dd>6-DOF IK, impedance control</dd></div>
+        <div><dt>Electronics</dt><dd>Custom PCB, CAN bus</dd></div>
+      </dl>
+      <div class="sheet__links">
+        <a class="btn btn--ink" href="TFG_Corvillo_Guerra_Belen.pdf" target="_blank" rel="noopener noreferrer">Read
+          thesis <span class="muted">PDF</span></a>
+        <a class="btn btn--ghost" href="TFG_Corvillo_Guerra_Belen.pdf"
+          download="TFG_Corvillo_Guerra_Belen.pdf">Download · 27 MB</a>
+      </div>
+      <p class="sheet__note"><span>ES</span> For now, the thesis is only available in Spanish.</p>
+    </div>
+  </template>
 
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="moyabot-video" class="modal-video" controls playsinline preload="metadata" poster="MOYABOT.jpeg">
-            <source src="Video%20moyabot.mp4" type="video/mp4">
-            <source src="Video moyabot.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+  <template id="p-delta-twin">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="webinar_kin_collision.png">
+        <source src="VideosKinWebinar/DemoWebinarColision.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—02</span> Virtual commissioning</p>
+      <h2 class="sheet__title" id="sheet-title">Dual Delta Digital Twin</h2>
+      <p>A <strong>virtual commissioning digital twin</strong> for a dual delta robot pick-and-place system, with
+        <strong>real-time collision avoidance</strong> between both robots in a shared workspace.</p>
+      <p>PLC control logic runs in <strong>TIA Portal</strong>, electrical drives are simulated in
+        <strong>SIMIT</strong>, and the 3D kinematic model lives in <strong>Siemens NX</strong>.</p>
+      <dl class="spec spec--light">
+        <div><dt>System</dt><dd>2 × delta robot, shared workspace</dd></div>
+        <div><dt>Feature</dt><dd>Real-time collision avoidance</dd></div>
+        <div><dt>Stack</dt><dd>TIA Portal, SIMIT, Siemens NX</dd></div>
+      </dl>
+    </div>
+  </template>
+
+  <template id="p-ml-plc">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="MACHINELEARNING_foto.png">
+        <source src="MACHINELEARNING_VIDEO.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—03</span> Reinforcement learning · PLC</p>
+      <h2 class="sheet__title" id="sheet-title">Self-optimising Pick &amp; Place</h2>
+      <p>A <strong>deep reinforcement learning (PPO)</strong> agent that autonomously optimises the kinematics of an
+        industrial pick-and-place cell.</p>
+      <ul class="sheet__list">
+        <li><strong>IT/OT bridge.</strong> Real-time link between asynchronous Python training threads and the
+          industrial PLC over <strong>OPC UA</strong>.</li>
+        <li><strong>Continuous multi-variable control.</strong> A custom <strong>Gymnasium</strong> environment maps
+          the network's actions onto 5 kinematic parameters: velocity, acceleration, jerk, dynamic wait positions and
+          blending radius.</li>
+        <li><strong>Autonomous convergence.</strong> A multi-criteria reward balancing cycle time and energy
+          converged to a consolidated, efficient strategy in 15 hours of training, verified in
+          <strong>TensorBoard</strong>.</li>
+      </ul>
+      <dl class="spec spec--light">
+        <div><dt>Agent</dt><dd>PPO</dd></div>
+        <div><dt>Interface</dt><dd>OPC UA ↔ PLC</dd></div>
+        <div><dt>Training</dt><dd>≈ 15 h to convergence</dd></div>
+      </dl>
+    </div>
+  </template>
+
+  <template id="p-moyabot">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="MOYABOT.jpeg">
+        <source src="Video%20moyabot.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—04</span> Manipulation · team of 5</p>
+      <h2 class="sheet__title" id="sheet-title">MoyaBot</h2>
+      <p>A 5-DOF robotic arm that collects sand and deposits it onto a controlled surface, built with four peers
+        during my degree. The video follows the build from first parts to working arm.</p>
+      <p>It uses <strong>cycloidal and helical gears</strong>, feedback-controlled motors under <strong>closed-loop
+          PID</strong>, and a pulley system that drives the articulated end effector.</p>
+      <dl class="spec spec--light">
+        <div><dt>DOF</dt><dd>5</dd></div>
+        <div><dt>Drive</dt><dd>Cycloidal + helical gears, pulleys</dd></div>
+        <div><dt>Control</dt><dd>Closed-loop PID</dd></div>
+      </dl>
+    </div>
+  </template>
+
+  <template id="p-tunabot">
+    <div class="sheet__media sheet__media--gallery">
+      <div class="gallery" data-gallery>
+        <div class="gallery__track">
+          <img src="TUNABOT_I.jpg" alt="TUNABOT educational robot">
+          <video controls playsinline muted preload="metadata">
+            <source src="TUNABOT_II.mp4" type="video/mp4">
           </video>
+          <img src="TUNABOT_III.jpeg" alt="Bio-inspired tuna replica">
         </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">MoyaBot</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Video showing the creation process of <strong>MoyaBot</strong>, a team project developed alongside four
-              peers during my engineering degree.
-            </p>
-            <p class="modal-paragraph">
-              The robot features <strong>5 degrees of freedom</strong>, cycloidal and helical gears, feedback-controlled
-              motors with <strong>closed-loop PID control</strong>, and an integrated pulley system driving the
-              articulated end-effector movement.
-            </p>
-          </div>
+        <div class="gallery__nav">
+          <button data-dir="-1" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 6l-6 6 6 6" />
+            </svg></button>
+          <span class="gallery__count" data-count>1 / 3</span>
+          <button data-dir="1" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" />
+            </svg></button>
         </div>
       </div>
     </div>
-  </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—05</span> Bio-inspired robotics · CSIC</p>
+      <h2 class="sheet__title" id="sheet-title">TUNABOT</h2>
+      <p>A STEAM project that uses robotics for ocean literacy, science outreach and environmental education,
+        coordinated by the <strong>CSIC</strong> (Spanish National Research Council). I helped create two educational
+        robots:</p>
+      <ul class="sheet__list">
+        <li><strong>Autonomous mobile robot</strong> that tracks predetermined colour targets in real time.</li>
+        <li><strong>Bio-inspired tuna replica</strong> engineered to mimic real fish locomotion and swim underwater.
+        </li>
+      </ul>
+    </div>
+  </template>
 
-  <!-- PROJECT DETAIL MODAL: TUNABOT -->
-  <div class="modal-overlay" id="tunabot-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-tunabot-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
+  <template id="p-escaperoom">
+    <div class="sheet__media sheet__media--rotated">
+      <video controls playsinline preload="metadata" poster="ESCAPEROOM%20CUBE.jpg" data-rotate="270">
+        <source src="ESCAPEROOM_CUBE_VIDEO.mp4" type="video/mp4">
+      </video>
+      <button class="rotate-btn" data-rotate-btn aria-label="Rotate video 90 degrees">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7" />
         </svg>
+        Rotate
       </button>
-
-      <div class="modal-content-grid">
-        <!-- CAROUSEL GALLERY -->
-        <div class="modal-carousel-container">
-          <div class="carousel-wrapper" id="tunabot-carousel-wrapper">
-            <!-- Slide 1 -->
-            <div class="carousel-slide active">
-              <img src="TUNABOT_I.jpg" alt="TUNABOT I - Educational Robot" class="carousel-media">
-            </div>
-            <!-- Slide 2 (MP4 video clip, muted) -->
-            <div class="carousel-slide">
-              <video class="carousel-media" controls playsinline muted preload="metadata">
-                <source src="TUNABOT_II.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-slide">
-              <img src="TUNABOT_III.jpeg" alt="TUNABOT III - Biomimetic Tuna Replica" class="carousel-media">
-            </div>
-          </div>
-
-          <!-- Carousel Navigation Buttons -->
-          <button class="carousel-btn prev-btn" id="tunabot-prev" aria-label="Previous image">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="carousel-btn next-btn" id="tunabot-next" aria-label="Next image">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          <!-- Carousel Dots -->
-          <div class="carousel-dots" id="tunabot-dots">
-            <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
-            <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
-            <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
-          </div>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">TUNABOT</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              STEAM approach utilizing robotics for ocean literacy, scientific dissemination, and environmental
-              education.
-            </p>
-            <p class="modal-paragraph">
-              Collaboration in the creation and development of two educational robots for the <strong>TUNABOT</strong>
-              project, coordinated by the <strong>CSIC</strong> (Spanish National Research Council):
-            </p>
-            <ul class="modal-bullets">
-              <li>
-                <strong>Autonomous mobile robot:</strong> Capable of tracking specific predetermined color targets in
-                real time.
-              </li>
-              <li>
-                <strong>Bioinspired tuna replica:</strong> Engineered to mimic real fish locomotion and swim underwater.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <!-- PROJECT DETAIL MODAL: FPGA_HERO -->
-  <div class="modal-overlay" id="fpga-hero-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-fpga-hero-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="fpga-hero-video" class="modal-video" controls playsinline preload="metadata"
-            poster="FPGA_HERO.jpg">
-            <source src="FPGA_HERO_VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">FPGA_HERO: Real-Time Rhythm Game in VHDL</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Designed and implemented a fully functional <strong>"Guitar Hero"</strong> clone from scratch on a
-              <strong>Nexys A7-100T FPGA</strong> without a microprocessor, developed alongside two peers during my
-              engineering degree.
-            </p>
-            <p class="modal-paragraph">
-              Developed custom VHDL modules for <strong>60Hz VGA graphics rendering</strong>, <strong>polyphonic PWM
-                audio synthesis</strong>, and <strong>PS/2 keyboard integration</strong> for real-time user input.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—06</span> Embedded · team of 3</p>
+      <h2 class="sheet__title" id="sheet-title">Escaperoom Cube</h2>
+      <p>A physical "bomb defusal" puzzle console powered by an <strong>STM32</strong> microcontroller, built with
+        two peers for a coursework project.</p>
+      <p><strong>SPI, I²C, ADC and PWM</strong> run side by side to drive several TFT screens, MEMS sensors and audio
+        synthesis in a highly concurrent system.</p>
+      <dl class="spec spec--light">
+        <div><dt>MCU</dt><dd>STM32</dd></div>
+        <div><dt>Buses</dt><dd>SPI, I²C, ADC, PWM</dd></div>
+        <div><dt>I/O</dt><dd>TFT displays, MEMS, audio</dd></div>
+      </dl>
     </div>
-  </div>
+  </template>
 
-  <!-- PROJECT DETAIL MODAL: ESCAPEROOM CUBE -->
-  <div class="modal-overlay" id="escaperoom-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-escaperoom-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container modal-video-escaperoom">
-          <button class="video-rotate-btn" id="rotate-escaperoom-btn" title="Rotate video 90°"
-            aria-label="Rotate video 90 degrees">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-            </svg>
-          </button>
-          <video id="escaperoom-video" class="modal-video video-rotated-90" controls playsinline preload="metadata"
-            poster="ESCAPEROOM%20CUBE.jpg">
-            <source src="ESCAPEROOM_CUBE_VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">ESCAPEROOM CUBE</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Developed alongside two peers for an engineering coursework project, we built a physical <strong>"bomb
-                defusal"</strong> interactive puzzle simulator powered by an <strong>STM32 microcontroller</strong>.
-            </p>
-            <p class="modal-paragraph">
-              Integrated <strong>SPI, I2C, ADC, and PWM protocols</strong> to seamlessly orchestrate multiple TFT
-              screens, MEMS sensors, and audio synthesis in a highly concurrent environment.
-            </p>
-          </div>
-        </div>
-      </div>
+  <template id="p-fpga-hero">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="FPGA_HERO.jpg">
+        <source src="FPGA_HERO_VIDEO.mp4" type="video/mp4">
+      </video>
     </div>
-  </div>
-
-  <!-- PROJECT DETAIL MODAL: DUAL DELTA DIGITAL TWIN -->
-  <div class="modal-overlay" id="delta-twin-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-delta-twin-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="delta-twin-video" class="modal-video" controls playsinline preload="metadata"
-            poster="webinar_kin_collision.png">
-            <source src="VideosKinWebinar/DemoWebinarColision.mp4" type="video/mp4">
-            <source src="VideosKinWebinar/DemoWebinarCollision.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">Dual Delta Robot Digital Twin</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Developed a <strong>Virtual Commissioning Digital Twin</strong> for a dual delta robot pick-and-place
-              system featuring <strong>real-time collision avoidance</strong> in a shared workspace.
-            </p>
-            <p class="modal-paragraph">
-              Integrated <strong>TIA Portal</strong> for PLC control logic, <strong>SIMIT</strong> for electrical drive
-              simulation, and <strong>Siemens NX</strong> for 3D kinematic modeling.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—07</span> Digital hardware · team of 3</p>
+      <h2 class="sheet__title" id="sheet-title">FPGA Hero</h2>
+      <p>A real-time rhythm game written from scratch in VHDL on a <strong>Nexys A7-100T</strong>, with no
+        microprocessor, built with two peers.</p>
+      <p>Custom modules handle <strong>60 Hz VGA rendering</strong>, <strong>polyphonic PWM audio
+          synthesis</strong> and <strong>PS/2 keyboard</strong> input.</p>
+      <dl class="spec spec--light">
+        <div><dt>Board</dt><dd>Nexys A7-100T</dd></div>
+        <div><dt>Language</dt><dd>VHDL, no CPU</dd></div>
+        <div><dt>Modules</dt><dd>VGA, PWM audio, PS/2</dd></div>
+      </dl>
     </div>
-  </div>
+  </template>
 
-  <!-- PROJECT DETAIL MODAL: MACHINE LEARNING IN PLC CONTROL -->
-  <div class="modal-overlay" id="ml-plc-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-ml-plc-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="ml-plc-video" class="modal-video" controls playsinline preload="metadata"
-            poster="MACHINELEARNING_foto.png">
-            <source src="MACHINELEARNING_VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">Machine Learning in PLC Control</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Designed and deployed a <strong>Deep Reinforcement Learning (PPO)</strong> agent to autonomously optimize
-              the kinematics of an industrial Pick & Place cell.
-            </p>
-            <ul class="modal-bullets">
-              <li>
-                <strong>IT/OT Bridge:</strong> Real-time communication between asynchronous Python training threads and
-                the industrial PLC via <strong>OPC UA</strong>.
-              </li>
-              <li>
-                <strong>Continuous Multi-Variable Control:</strong> Custom <strong>Gymnasium</strong> environment
-                mapping neural network decisions into 5 real-world kinematic parameters (velocity, acceleration, jerk,
-                dynamic wait positions, and blending radius).
-              </li>
-              <li>
-                <strong>Autonomous Convergence:</strong> Multi-criteria reward function (balancing cycle time and energy
-                consumption) converging to a consolidated, highly efficient strategy in 15 hours of training—verified
-                via <strong>TensorBoard</strong>.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <template id="p-chess">
+    <div class="sheet__media">
+      <video controls playsinline preload="metadata" poster="chess%20foto.png">
+        <source src="CHESS_VIDEO.mp4" type="video/mp4">
+      </video>
     </div>
-  </div>
-
-  <!-- PROJECT DETAIL MODAL: TARANTULA -->
-  <div class="modal-overlay" id="tarantula-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-tarantula-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="tarantula-video" class="modal-video" controls playsinline preload="metadata"
-            poster="TARANTULA_foto.png">
-            <source src="VIDEO_TARANTULA.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">TARANTULA</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Meet <strong>TARANTULA</strong>, my undergraduate thesis: a custom-engineered quadruped robot designed for
-              complex inspection in confined and hazardous spaces.
-            </p>
-            <p class="modal-paragraph">
-              Months of R&D went into bringing this robot to life. On the hardware side, it was designed in
-              <strong>Autodesk Fusion</strong>, resulting in a machined carbon fiber and ASA polymer structure keeping
-              the total mass strictly under <strong>7 kg</strong>. The design is fully vertically reversible, meaning it
-              can operate seamlessly even if flipped upside down.
-            </p>
-            <p class="modal-paragraph">
-              On the software and electronics side, I formulated the mathematical framework with <strong>real-time 6-DOF
-                inverse kinematics</strong> running on a custom C++ architecture. To interact robustly with its
-              environment, I implemented <strong>active impedance control</strong> for dynamic impact absorption,
-              programmed two locomotion gaits, and developed a custom-engineered PCB integrating <strong>CAN bus
-                telemetry</strong> and <strong>Hall-effect sensors</strong> for tactile ground detection.
-            </p>
-          </div>
-
-          <!-- Thesis PDF Resource Box -->
-          <div class="modal-pdf-box">
-            <div class="pdf-box-info">
-              <div class="pdf-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <div class="pdf-meta">
-                <h4>Bachelor's Thesis (TFG)</h4>
-                <p>TFG_Corvillo_Guerra_Belen.pdf &bull; 27 MB</p>
-              </div>
-            </div>
-            <div class="pdf-box-actions">
-              <a href="TFG_Corvillo_Guerra_Belen.pdf" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary btn-sm">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                Preview PDF
-              </a>
-              <a href="TFG_Corvillo_Guerra_Belen.pdf" download="TFG_Corvillo_Guerra_Belen.pdf"
-                class="btn btn-primary btn-sm">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="sheet__info">
+      <p class="kicker"><span>P—08</span> Software · team of 5</p>
+      <h2 class="sheet__title" id="sheet-title">Balbo Chess</h2>
+      <p>An interactive 2D game engine in <strong>C++</strong>, rendered with <strong>freeglut / OpenGL</strong> and
+        built on object-oriented design. It plays the <em>Balbo's Chess</em> variant on a diamond board, with pieces
+        themed as rival UPM engineering schools.</p>
+      <p>For solo play, the AI uses <strong>Minimax with alpha-beta pruning</strong> and variable search depth to
+        balance tactical depth with instant response.</p>
+      <dl class="spec spec--light">
+        <div><dt>Language</dt><dd>C++ (OOP)</dd></div>
+        <div><dt>Rendering</dt><dd>freeglut / OpenGL</dd></div>
+        <div><dt>AI</dt><dd>Minimax + α-β pruning</dd></div>
+      </dl>
     </div>
-  </div>
-
-  <!-- PROJECT DETAIL MODAL: BALBO CHESS -->
-  <div class="modal-overlay" id="chess-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-dialog glass-card">
-      <button class="modal-close-btn" id="close-chess-modal" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-content-grid">
-        <div class="modal-video-container">
-          <video id="chess-video" class="modal-video" controls playsinline preload="metadata" poster="chess foto.png">
-            <source src="CHESS_VIDEO.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="modal-info-container">
-          <h2 class="modal-project-title">Balbo's Chess: Object-Oriented C++ Game Engine</h2>
-
-          <div class="modal-text-block">
-            <p class="modal-paragraph">
-              Developed alongside four peers during my engineering degree, <strong>Balbo Chess</strong> is an
-              interactive 2D game engine programmed in <strong>C++</strong> (Visual Studio) and rendered with
-              <strong>freeglut / OpenGL</strong>. Built on <strong>Object-Oriented Programming</strong> principles
-              (inheritance and polymorphism), it implements the strategic <em>Balbo's Chess</em> variant on a custom
-              diamond board with pieces themed as rival UPM engineering faculties.
-            </p>
-            <p class="modal-paragraph">
-              For solo play against the machine, we integrated an autonomous <strong>AI engine</strong> powered by the
-              <strong>Minimax algorithm</strong> with <strong>Alpha-Beta pruning</strong> and <strong>variable search
-                depth</strong>, balancing deep tactical calculation with instantaneous response.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast-notification" id="toast">Message sent successfully!</div>
+  </template>
 
   <script src="main.js"></script>
+  <script src="arm.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="spider.js"></script>
 </body>
 
 </html>

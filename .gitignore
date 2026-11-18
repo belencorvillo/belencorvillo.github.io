@@ -6,3 +6,10 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# Local tooling
+.claude/
+
+# Source CAD (the site uses the derived tarantula.glb)
+*.step
+*.f3z
